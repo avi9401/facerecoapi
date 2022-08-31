@@ -8,6 +8,9 @@ const signin = require('./controllers/signin');
 const image = require('./controllers/image');
 const profile = require('./controllers/profile');
 
+process.on('unhandledRejection', (reason, promise) => {
+  console.log('error');
+});
 
 
 
