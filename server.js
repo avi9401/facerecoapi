@@ -17,10 +17,8 @@ process.on('unhandledRejection', (reason, promise) => {
 const db = knex({
   client: 'pg',
   connection: {
-    host : 'postgresql-rugged-74706',
-    user : 'postgres',
-    password : '9966',
-    database : 'smart-brain'
+    host : process.env.DATABASE_URL,
+    ssl: true
   }
 });
 
