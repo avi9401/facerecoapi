@@ -31,7 +31,7 @@ app.use(cors());
 
 
 
-app.get('/', (req, res)=>{ res.send('success') })
+app.get('/', (req, res) => { res.send('success') })
 
 app.post('/signin', (req, res) => { signin.handleSignin(req, res, db, bcrypt)})
 
@@ -48,8 +48,8 @@ app.post('/imageurl', (req, res) => { image.handleApiCall(req, res) })
 
 
  
-let PORT = process.env.PORT || 5000;
+let PORT1 = process.env.PORT || 5000;
 
-app.listen(PORT, () => {
-  console.log(`Listening on ${ PORT }`);
+app.listen(PORT1, () => {
+  console.log(`Listening on ${ PORT1 }`);
 });
