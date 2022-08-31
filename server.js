@@ -8,7 +8,7 @@ const signin = require('./controllers/signin');
 const image = require('./controllers/image');
 const profile = require('./controllers/profile');
 
-const PORT = process.env.PORT || 5000
+
 
 
 const db = knex({
@@ -48,5 +48,8 @@ app.post('/imageurl', (req, res) => { image.handleApiCall(req, res) })
 
 
  
+let PORT = process.env.PORT || 5000;
 
-app.listen(PORT, () => console.log(`Listening on ${ PORT }`))
+app.listen(PORT, () => {
+  console.log(`Listening on ${ PORT }`);
+});
