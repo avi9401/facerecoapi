@@ -17,15 +17,12 @@ process.on('unhandledRejection', (reason, promise) => {
 const db = knex({
   client: 'pg',
   connection: {
-    host : process.env.DATABASE_URL,
+    connectionString : process.env.DATABASE_URL,
     ssl: true
   }
-  
+
 });
 
-db.select('*').from('users').then(data =>{
-	console.log(data);
-});
 
 const app = express();
 app.use(express.json());
